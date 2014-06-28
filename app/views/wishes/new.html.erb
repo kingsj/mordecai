@@ -1,0 +1,17 @@
+<h1>Thanks for creating a wish! Wishes:</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @wishes.each do |wish| %>
+		<tr>
+			<td>wish.author</td>
+			<td>wish.message</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
