@@ -18,7 +18,7 @@ class BirthdaysController < ApplicationController
   			WishMailer.wish_email(recipient, params[:name], params[:day]).deliver
   		end
   	else
-  		flash[:error] = "Unable to create birthday!"
+  		flash[:alert] = "Unable to create birthday!"
   	end
   	redirect_to '/admin'
   end

@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Mordecai</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<div class="container">
-	<%= yield %>
-</div>
-
-</body>
+<html lang="en">
+	<head>
+		<title>iX Celebrates Birthdays</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<link rel="shortcut icon" href="images/favicon.png">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>iX CELEBRATES BIRTHDAYS</h1>
+			</div>
+		</header>
+		<div class="container">
+			<% if flash[:notice] %>
+			<div class="alert alert-success"><%= flash[:notice] %></div>
+			<% end %>
+			<% if flash[:alert] %>
+			<div class="alert alert-danger"><%= flash[:alert] %></div>
+			<% end %>
+			<%= yield %>
+		</div>
+	</body>
 </html>
