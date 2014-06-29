@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   get 'admin' => 'birthdays#new'
   post 'birthdays' => 'birthdays#create'
-  post 'wishes' => 'wishes#create'
+  get 'wishes' => 'wishes#create'
+  get 'wishes/new' => 'wishes#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

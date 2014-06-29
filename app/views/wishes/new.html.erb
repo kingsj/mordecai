@@ -9,8 +9,8 @@
 	<tbody>
 		<% @wishes.each do |wish| %>
 		<tr>
-			<td>wish.author</td>
-			<td>wish.message</td>
+			<td><%= wish.author %> </td>
+			<td><%= wish.message %></td>
 		</tr>
 		<% end %>
 	</tbody>
