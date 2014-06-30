@@ -24,7 +24,7 @@ class BirthdaysController < ApplicationController
   end
 
   def create
-  	@birthday = Birthday.new( birthday_params )
+  	@birthday  = Birthday.new( birthday_params )
   	if @birthday.save 
   		flash[:notice] = "Created birthday successfully!"
   		Birthday.email_list(params[:recipients]).each do |recipient|
@@ -38,6 +38,6 @@ class BirthdaysController < ApplicationController
 
   private 
     def birthday_params
-      params.require(:birthday).permit(:name, :day, :background, :profile)
+      params.require(:birthday).permit(:name, :day, :background, :background_file_name, :profile, :profile_file_name)
     end
 end
