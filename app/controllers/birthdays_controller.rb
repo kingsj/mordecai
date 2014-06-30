@@ -39,7 +39,7 @@ class BirthdaysController < ApplicationController
   private 
     def birthday_params
       params.require(:birthday).permit(:name, :day, 
-        :background, :background_file_name, :background_content_type, :background_file_size, :background_updated_at 
+        :background, :background_file_name, :background_content_type, :background_file_size, :background_updated_at,
         :profile, :profile_file_name, :profile_content_type, :profile_file_size, :background_updated_at)
     end
 end
