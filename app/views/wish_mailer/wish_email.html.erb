@@ -7,11 +7,13 @@
 <body style="background-color:#16B6FA;color:white;padding:20px;font-size:18px;">
 	<h3>Hey,</h3> 
 
+	<p>The url is: | <%= @url %> | </p>
+
 	<p>Someone on GroupWish thought you'd like to wish <%= @name %> a happy birthday, which is coming up on <%= @day %>! Please fill out your message and name below!</p>
 
 
 
-	<form action=<%= @url %>, method='post'>
+	<form action= <%= @url %> , method='post'>
 		<label for="message">Message</label><br>
 		<textarea name="message"></textarea><br>
 		<label for="author">Author</label><br>
