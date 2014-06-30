@@ -28,7 +28,7 @@ class BirthdaysController < ApplicationController
   	if @birthday.save 
   		flash[:notice] = "Created birthday successfully!"
   		Birthday.email_list(params[:recipients]).each do |recipient|
-  			WishMailer.wish_email(recipient, params[:name], params[:day]).deliver
+  			WishMailer.wish_email(recipient, @birthday).deliver
   		end
   	else 
   		flash[:alert] = "Unable to create birthday!"

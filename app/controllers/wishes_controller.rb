@@ -1,9 +1,6 @@
 class WishesController < ApplicationController
   def create
-  	logger.debug "HELLO"
-    logger.debug params[:message]
-    logger.debug params[:author]
-    @wish = Wish.new(message: params[:message], author: params[:author])
+    @wish = Wish.new(message: params[:message], author: params[:author], birthday_id: params[:birthday_id])
   	if @wish.save
   		flash[:notice] = "Wish created successfully"
   	else 

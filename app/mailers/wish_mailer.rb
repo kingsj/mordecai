@@ -5,11 +5,9 @@ class WishMailer < ActionMailer::Base
   # add_template_helper(ApplicationHelper)
   
 
-  def wish_email(recipient, name, day)
+  def wish_email(recipient, birthday)
   	@url = 'cryptic-wave-8513.herokuapp.com/wishes'
-  	# @url = 
-  	@name = name
-  	@day = day
-  	mail(to: recipient, subject: "Wish #{name} a happy birthday!")
+  	@birthday = birthday
+  	mail(to: recipient, subject: "Wish #{birthday.name} a happy birthday!")
   end
 end
