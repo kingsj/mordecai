@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'birthdays#index'
-
   get 'admin' => 'birthdays#new'
-  post 'birthdays' => 'birthdays#create'
-  post 'wishes' => 'wishes#create'
-  get 'wishes/new' => 'wishes#new'
+
+  resources :wishes, only: [:new, :create]
+  resources :birthdays, only: [:create]  
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

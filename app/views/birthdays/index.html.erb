@@ -1,26 +1,18 @@
 <!-- NOTE: Opening this file in Chrome WILL NOT WORK.
 To make changes, please follow the directions in README.md -->
 
-
-
-<div class="col-md-6 col-lg-offset-1 col-lg-5">
+<!-- "col-md-6 col-lg-offset-1 col-lg-5" -->
+<% @birthdays.each do |birthday| %>
+<div class=<%= @column %>>
 <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"> -->
-  <a href="people/zack.html">
+  
+  <a href=<%= "people/" + birthday.name.downcase + ".html" %>>
     <div class="birthday-person">
-      <img src="images/people/zack.jpg" alt="">
+      <%= image_tag birthday.profile.url %>
       <div class="overlay"></div>
-      <div class="text">ZACK</div>
+      <div class="text"><%= birthday.name.upcase %></div>
     </div>
   </a>
-</div>
-<div class="col-md-6 col-lg-5">
-<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"> -->
-  <a href="people/mikenzie.html">
-    <div class="birthday-person">
-      <img src="images/people/mikenzie_cake.jpg" alt="">
-      <div class="overlay"></div>
-      <div class="text">MIKENZIE</div>
-    </div>
-  </a>
-</div>
+</div>  
+<% end %>
  
