@@ -1,2 +1,6 @@
-<h1>Wishes#create</h1>
-<p>Find me in app/views/wishes/create.html.erb</p>
+<h1>Thanks for wishing <%= @wish.birthday.name %> a happy birthday! </h1>
+
+<p>
+	You can view their birthday page <%= link_to 'here', "/birthdays/#{@wish.birthday.id}" %>.
+</p>
+

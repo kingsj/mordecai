@@ -6,10 +6,6 @@ class WishesController < ApplicationController
   	else 
   		flash[:alert] = "Wish could not be created."
   	end
-  	redirect_to '/wishes/new'
   end
 
-  def new
-  	@wishes = Wish.all
-  end
 end
