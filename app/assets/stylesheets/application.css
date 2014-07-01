@@ -16,7 +16,7 @@
 
 /*@import url(http://fonts.googleapis.com/css?family=Lato:700,400italic,700italic);*/
 @import 'bootstrap';
-@import 'birthday_style';
+/*@import 'birthday_style';*/
 
 body {
   font: 16px/1.3 normal 'Lato', helvetica;
@@ -104,4 +104,59 @@ header:hover {
   background-position: center center;
   background-repeat: no-repeat;
   width: auto; height: auto; z-index: -100;
+}
+
+.birthday-box {
+  width: 50%;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/*.bg-img {
+  background-image: url(/birthdays/images/people/zack-beach.png);
+}*/
+
+.carousel-container {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50%;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+.carousel-inner {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.comment {
+  font-size: 20px;
+}
+.author {
+  text-align: right;
+}
+.item {
+  height: 200px;
+  overflow-y: scroll;
+  padding: 8px;
+  -webkit-transition: 0.4s ease-in-out left;
+  -moz-transition: 0.4s ease-in-out left;
+  -o-transition: 0.4s ease-in-out left;
+  transition: 0.4s ease-in-out left;
+}
+.show_birthday .text {
+  margin-left: 40px;
+  margin-top: 50px;
+}
+.header {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.date {
+  font-size: 30px;
 }
