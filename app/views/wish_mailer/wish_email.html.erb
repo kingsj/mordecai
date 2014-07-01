@@ -7,9 +7,7 @@
 <body style="background-color:#16B6FA;color:white;padding:20px;font-size:18px;">
 	<h3>Hey,</h3> 
 
-	<p>Someone on GroupWish thought you'd like to wish <%= @birthday.name %> a happy birthday, which is celebrated on <%= @birthday.daystrftime("%B %e") %>! Please fill out your message and name below!</p>
-
-
+	<p>Someone on GroupWish thought you'd like to wish <%= @birthday.name %> a happy birthday, which is celebrated on <%= @birthday.day.strftime("%B %e") %>! Please fill out your message and name below!</p>
 
 	<form action= <%= @url %> , method='post'>
 		<input type="hidden" value=<%= @birthday.id %> name="birthday_id">
