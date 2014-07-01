@@ -16,6 +16,8 @@ class BirthdaysController < ApplicationController
   end
 
   def show
+    @birthday = Birthday.find(params[:id])
+    render 'show', layout: 'show_birthday'
   end
 
   def new

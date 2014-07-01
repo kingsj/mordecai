@@ -6,13 +6,14 @@ To make changes, please follow the directions in README.md -->
 <div class=<%= @column %>>
 <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"> -->
   
-  <a href=<%= "people/" + birthday.name.downcase + ".html" %>>
+  <a href=<%= "/birthdays/#{birthday.id}" %>>
     <div class="birthday-person">
       <%= image_tag birthday.profile.url %>
       <div class="overlay"></div>
       <div class="text"><%= birthday.name.upcase %></div>
     </div>
   </a>
+
 </div>  
 <% end %>
  

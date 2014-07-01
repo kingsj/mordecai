@@ -1,2 +1,33 @@
-<h1>Birthdays#show</h1>
-<p>Find me in app/views/birthdays/show.html.erb</p>
+<div class="bg-img"></div>
+<div class="text">
+  <h1 class="header">Happy 19th, <%= @birthday.name %></h1>
+  <p class="date"><%= @birthday.day.strftime("%B %e, %Y") %></p>
+</div>
+<a href="/">
+  <%= image_tag 'favicon.png', class: 'person-logo' %>
+</a>
+<div class="carousel-container">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <% @birthday.wishes.each_with_index do |wish, index| %>
+      <% class_name = (index == 0) ? "item active" : "item" %>
+      <div class= "<%=class_name %>" >
+        <p class="comment">
+        <%= wish.message %>
+        </p>
+        <p class="author">-<%= wish.author %></p>
+      </div>  
+      <% end %>
+    </div>
+    
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>

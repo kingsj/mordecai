@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>iX Celebrates Birthdays</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<link rel="shortcut icon" href="images/favicon.png">
+	</head>
+	<body>
+		<div class="show_birthday"><%= yield %></div>		
+	</body>
+</html>
+
