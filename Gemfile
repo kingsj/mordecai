@@ -1,7 +1,7 @@
 	source 'https://rubygems.org'
 
 gem 'devise'
-gem "paperclip", "~> 4.1"
+gem 'carrierwave'
 gem 'pry-debugger'
 gem 'better_errors'
 gem 'binding_of_caller'
