@@ -12,5 +12,10 @@ To make changes, please follow the directions in README.md -->
 			<div class="text"><%= birthday.name.upcase %></div>
 		</div>
 	</a>
+	<% if user_signed_in? %>
+		<%= link_to 'Edit', edit_birthday_path(birthday) %>	
+		<%= link_to 'Delete', birthday, method: 'delete', data: { confirm: 'Are you sure?' } %>	
+	<% end %>
+	
 </div>
 <% end %>

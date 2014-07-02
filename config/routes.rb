@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'admin' => 'birthdays#new'
 
   resources :wishes, only: [:new, :create]
-  resources :birthdays, only: [:create, :show]  
+  resources :birthdays, only: [:create, :show, :edit, :update, :destroy]  
 
   
   # The priority is based upon order of creation: first created -> highest priority.
