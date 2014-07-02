@@ -1,6 +1,6 @@
 class BirthdaysController < ApplicationController
   # skip_before_action  :verify_authenticity_token
-  before_action :authenticate_user!, :except => [:index]
+  before_action :authenticate_user!, :except => [:index, :show]
 
   def column(n) 
     if n != 0
