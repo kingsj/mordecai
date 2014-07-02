@@ -3,12 +3,18 @@ class BirthdaysController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
   before_action :set_birthday, only: [:edit, :show, :update, :destroy]
 
-  def column(n) 
-    if n != 0
-      "col-md-" + (12/n).to_s
-    else 
-      ""
+  def columns(n) 
+    if n == 0 
+      return [""]
     end
+    col = []
+    n.times do
+      col << "col-md-6"
+    end
+    if n % 2 != 0 
+      col[-1] = "col-md-12"
+    end
+    col
   end
 
   def edit
@@ -30,7 +36,7 @@ class BirthdaysController < ApplicationController
 
   def index
     @birthdays = Birthday.all
-    @column = column(@birthdays.size)
+    @columns = columns(@birthdays.size)
   end
 
   def show

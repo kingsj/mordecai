@@ -1,10 +1,9 @@
 <!-- NOTE: Opening this file in Chrome WILL NOT WORK.
 To make changes, please follow the directions in README.md -->
 <!-- "col-md-6 col-lg-offset-1 col-lg-5" -->
-<% @birthdays.each do |birthday| %>
-<div class=<%= @column %>>
+<% @birthdays.each_with_index do |birthday, index| %>
+<div class=<%= @columns[index] %>>
 	<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6"> -->
-	
 	<a href=<%= "/birthdays/#{birthday.id}" %>>
 		<div class="birthday-person">
 			<%= image_tag birthday.profile_url.to_s %>

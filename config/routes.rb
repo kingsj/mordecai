@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'birthdays#index'
   get 'admin' => 'birthdays#new'
 
-  resources :wishes, only: [:new, :create]
+  resources :wishes, only: [:new, :create, :show]
+
   resources :birthdays, only: [:create, :show, :edit, :update, :destroy]  
 
   
