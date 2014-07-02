@@ -6,7 +6,7 @@ class WishMailer < ActionMailer::Base
   
 
   def wish_email(recipient, birthday)
-  	@url = 'cryptic-wave-8513.herokuapp.com/wishes'
+  	@url = 'fast-wildwood-8236.herokuapp.com/wishes'
   	@birthday = birthday
   	mail(to: recipient, subject: "Wish #{birthday.name} a happy birthday!")
   end
