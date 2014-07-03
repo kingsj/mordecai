@@ -1,6 +1,5 @@
 class WishesController < ApplicationController
   def create
-    @wish = 
   	if Wish.unique_wish(params[:birthday_id], params[:wisher_id])
   		Wish.create(message: params[:message], author: params[:author], birthday_id: params[:birthday_id], wisher_id: params[:wisher_id])
   		flash[:notice] = "Wish created successfully!"
