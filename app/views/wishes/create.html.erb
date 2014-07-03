@@ -1,6 +1,12 @@
+<% if @wish %>
 <h1>Thanks for wishing <%= @wish.birthday.name %> a happy birthday! </h1>
-
 <p>
-	You can view their birthday page <%= link_to 'here', "/birthdays/#{@wish.birthday.id}" %>.
+You can view their birthday page <%= link_to 'here', "/birthdays/#{@wish.birthday.id}" %>.
 </p>
-
+<% else %>
+<h1>Thanks for having already wished <%= @birthday.name %> a happy birthday!</h1>
+<p>
+	You can view their birthday page 
+	<%= link_to 'here', "/birthdays/#{@birthday.id}" %>.
+</p>
+<% end %>
