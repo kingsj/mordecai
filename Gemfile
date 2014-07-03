@@ -1,7 +1,9 @@
 	source 'https://rubygems.org'
 
-gem 'devise'
 gem 'carrierwave'
+gem 'fog'
+
+gem 'devise'
 gem 'pry-debugger'
 gem 'better_errors'
 gem 'binding_of_caller'
