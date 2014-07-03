@@ -5,7 +5,8 @@ class WishMailer < ActionMailer::Base
   # add_template_helper(ApplicationHelper)
   
 
-  def wish_email(recipient, birthday)
+  def wish_email(recipient, birthday, wisher_id)
+  	@wisher_id = wisher_id
   	@url = 'fast-wildwood-8236.herokuapp.com/wishes'
   	@birthday = birthday
   	mail(to: recipient, subject: "Wish #{birthday.name} a happy birthday!")

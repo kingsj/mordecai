@@ -12,8 +12,10 @@ To make changes, please follow the directions in README.md -->
 		</div>
 	</a>
 	<% if user_signed_in? %>
-		<%= link_to 'Edit', edit_birthday_path(birthday) %>	
-		<%= link_to 'Delete', birthday, method: 'delete', data: { confirm: 'Are you sure?' } %>	
+	<div class="center">
+		<%= link_to 'Edit', edit_birthday_path(birthday), class: 'btn btn-info' %>
+		<%= link_to 'Delete', birthday, method: 'delete', class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+	</div>
 	<% end %>
 	
 </div>
