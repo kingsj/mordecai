@@ -4,7 +4,7 @@ class Wish < ActiveRecord::Base
 	def self.unique_wish(birthday_id, wisher_id)
 		birthday = Birthday.find(birthday_id)
 		birthday.wishes.each do |wish|
-			if wish.wisher_id == wisher_id
+			if wish.wisher_id.to_i == wisher_id.to_i
 				return false
 			end
 		end	
