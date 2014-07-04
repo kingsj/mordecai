@@ -1,6 +1,7 @@
 	source 'https://rubygems.org'
 
 gem 'carrierwave'
+gem 'rmagick'
 # gem 'fog'
 gem 'devise'
 gem 'pry-debugger'
