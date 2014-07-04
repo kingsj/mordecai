@@ -2,6 +2,7 @@
 
 gem 'carrierwave'
 gem 'fog'
+gem 'heroku'
 
 gem 'devise'
 gem 'pry-debugger'
