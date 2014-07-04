@@ -1,9 +1,7 @@
 	source 'https://rubygems.org'
 
 gem 'carrierwave'
-gem 'fog'
-gem 'heroku'
-
+# gem 'fog'
 gem 'devise'
 gem 'pry-debugger'
 gem 'better_errors'
