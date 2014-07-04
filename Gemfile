@@ -2,7 +2,7 @@
 
 gem 'carrierwave'
 gem 'rmagick'
-# gem 'fog'
+gem 'fog'
 gem 'devise'
 gem 'pry-debugger'
 gem 'better_errors'
