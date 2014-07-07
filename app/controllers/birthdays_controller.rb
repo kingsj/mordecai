@@ -1,7 +1,7 @@
 class BirthdaysController < ApplicationController
   # skip_before_action  :verify_authenticity_token
   before_action :authenticate_user!, :except => [:index, :show]
-  before_action :set_birthday, only: [:edit, :show, :update, :destroy]
+  before_action :set_birthday, only: [:edit, :show, :update, :destroy, :mail, :deliver]
 
   def columns(n) 
     if n == 0 
@@ -49,16 +49,38 @@ class BirthdaysController < ApplicationController
   end
 
   def create
-  	@birthday  = Birthday.new( birthday_params )
+    @recipients = Birthday.email_list(params[:recipients])
+  	@birthday  = Birthday.new( birthday_params.merge({ wisher_count: @recipients.size }))
   	if @birthday.save 
   		flash[:notice] = "Created birthday successfully!"
-  		Birthday.email_list(params[:recipients]).each_with_index do |recipient, index|
+  		@recipients.each_with_index do |recipient, index|
   			WishMailer.wish_email(recipient, @birthday, index).deliver
   		end
   	else 
   		flash[:alert] = "Unable to create birthday!"
   	end
   	redirect_to '/admin'
+  end
+
+  def mail 
+  end
+
+  def pluralize(count, noun)
+    if count != 0
+      count == 1 ? "#{count} #{noun}" : "#{count} #{noun.pluralize}"
+    end
+  end
+
+  def deliver
+    @recipients = Birthday.email_list(params[:recipients])
+    @birthday.wisher_count += @recipients.size
+    @birthday.save
+    word = pluralize(@recipients.size, "recipient")
+    flash[:notice] = "Delivered mail to #{word}!"
+    @recipients.each_with_index do |recipient, index|
+        Wis hMailer.wish_email(recipient, @birthday, index + @birthday.wisher_count).deliver
+    end
+    redirect_to birthdays_path
   end
 
   private 

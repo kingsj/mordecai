@@ -3,10 +3,12 @@ Rails.application.routes.draw do
 
   root 'birthdays#index'
   get 'admin' => 'birthdays#new'
+  get 'birthdays/:id/mail' => 'birthdays#mail'
+  post 'birthdays/:id/mail' => 'birthdays#deliver'
 
   resources :wishes, only: [:new, :create, :show]
 
-  resources :birthdays, only: [:create, :show, :edit, :update, :destroy]  
+  resources :birthdays, only: [:create, :show, :edit, :update, :destroy, :index]  
 
   
   # The priority is based upon order of creation: first created -> highest priority.
