@@ -78,7 +78,7 @@ class BirthdaysController < ApplicationController
     word = pluralize(@recipients.size, "recipient")
     flash[:notice] = "Delivered mail to #{word}!"
     @recipients.each_with_index do |recipient, index|
-        Wis hMailer.wish_email(recipient, @birthday, index + @birthday.wisher_count).deliver
+        WishMailer.wish_email(recipient, @birthday, index + @birthday.wisher_count).deliver
     end
     redirect_to birthdays_path
   end
