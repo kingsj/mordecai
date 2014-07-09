@@ -35,7 +35,9 @@ class BirthdaysController < ApplicationController
   end
 
   def index
-    @birthdays = Birthday.all
+    @birthdays = Birthday.all.order("day DESC")
+    # hashes = @birthdays.to_a.map(&:serializable_hash)
+
     @columns = columns(@birthdays.size)
   end
 

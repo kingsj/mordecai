@@ -10,7 +10,6 @@ adi2hf@virginia.edu,
 amandeepsaini1995@gmail.com,
 amy.chang@yale.edu,
 bh2447@barnard.edu,
-btaleisnik@gmail.com,
 cmc4af@virginia.edu,
 christianliu@college.harvard.edu,
 enwankwo@college.harvard.edu,
@@ -35,11 +34,13 @@ michael.p.cacchio.tu15@tuck.dartmouth.edu,
 mikenzig@umich.edu,
 petter.wehlin@yale.edu,
 quintont@umich.edu,
+btaleisnik@gmail.com,
 rohitahuja@college.harvard.edu,
 sabra.meretab@gmail.com,
 sarahschachman@college.harvard.edu,
-zhangyd@umich.edu,
-zchauvin@college.harvard.edu,
+zhangyd@umich.edu
+
+
 aaron@ixperience.co.za,
 alexis@ixperience.co.za,
 darren@ixperience.co.za,
@@ -48,4 +49,7 @@ salman@iexperience.co.za,
 isra@ixperience.co.za,
 jonny@ixperience.co.za,
 rafi@ixperience.co.za,
-seth@ixperience.co.za
+seth@ixperience.co.za,
+elan@ixperience.co.za
+
+zchauvin@college.harvard.edu,
