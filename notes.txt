@@ -14,7 +14,8 @@ cmc4af@virginia.edu,
 christianliu@college.harvard.edu,
 enwankwo@college.harvard.edu,
 Gabriel.K.Corso.17@dartmouth.edu,
-gacheng@umich.edu,
+gacheng@umich.edu
+
 jg5ash4@gmail.com,
 elgaricimo@gmail.com,
 osgerman@umich.edu,
@@ -28,6 +29,7 @@ kamaljit@sas.upenn.edu,
 kevin.h.nguyen.15@dartmouth.edu,
 kmihayo@college.harvard.edu,
 lep9cf@virginia.edu,
+
 lylesswift@gmail.com,
 mtl47@georgetown.edu,
 michael.p.cacchio.tu15@tuck.dartmouth.edu,
@@ -49,7 +51,7 @@ salman@iexperience.co.za,
 isra@ixperience.co.za,
 jonny@ixperience.co.za,
 rafi@ixperience.co.za,
-seth@ixperience.co.za,
 elan@ixperience.co.za
 
+seth@ixperience.co.za,
 zchauvin@college.harvard.edu,
