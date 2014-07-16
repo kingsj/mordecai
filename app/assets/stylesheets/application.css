@@ -46,6 +46,15 @@ header:hover {
   text-align: center;
 }
 
+.title {
+  text-align: center;
+}
+
+.dash-buttons {
+  text-align: center;
+  margin: 40px auto;
+}
+
 .birthday-person {
   height: 444px;
   width: 444px;
@@ -111,13 +120,22 @@ header:hover {
   width: auto; height: auto; z-index: -100;
 }
 
-.birthday-box {
+.birthday-panel {
   width: 50%;
+}
+
+.dashboard {
+  width: 70%
+}
+
+.box {
   margin: 50px auto;
   background-color: white;
   border-radius: 20px;
   padding: 20px;
 }
+
+
 
 /*.bg-img {
   background-image: url(/birthdays/images/people/zack-beach.png);

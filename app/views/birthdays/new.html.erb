@@ -1,5 +1,4 @@
-<div class="birthday-box">
-	You are signed in as <%= @user.email %>
+<div class="birthday-panel box">
 	<h1>Create a New Birthday!</h1>
 	
 	<%= form_for @birthday, url: birthdays_path, method: 'post', :html => { :multipart => true } do |f| %>
@@ -34,5 +33,5 @@
 	
 	<%= f.submit 'Create!', class: 'btn btn-primary' %>
 	<% end %>
-	<%= link_to 'Log Out', destroy_user_session_path, method: 'delete' %>
+	<%= link_to 'Dashboard', '/admin', class: 'btn btn-success' %>
 </div>

@@ -1,0 +1,11 @@
+<div class="dashboard box">
+	<h3 class="center">Welcome to the Admin Dashboard, <%= current_user.email %></h3>
+	
+
+
+	<div class="dash-buttons">
+		<%= link_to 'New Birthday', new_birthday_path, class: 'btn-lg btn-info' %>
+		<%= link_to 'Birthdays', birthdays_path, class: 'btn-lg btn-warning' %>
+		<%= link_to 'Log Out', destroy_user_session_path, method: 'delete', class: 'btn-lg btn-success' %>
+	</div>
+</div>

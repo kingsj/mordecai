@@ -2,13 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'birthdays#index'
-  get 'admin' => 'birthdays#new'
+  get 'admin' => 'users#show'
   get 'birthdays/:id/mail' => 'birthdays#mail'
   post 'birthdays/:id/mail' => 'birthdays#deliver'
 
   resources :wishes, only: [:new, :create, :show]
 
-  resources :birthdays, only: [:create, :show, :edit, :update, :destroy, :index]  
+  resources :birthdays
+
+  # resources :users, only: [:show]  
 
   
   # The priority is based upon order of creation: first created -> highest priority.
