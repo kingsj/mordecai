@@ -11,7 +11,7 @@ To make changes, please follow the directions in README.md -->
 			<div class="text"><%= birthday.name.upcase %></div>
 		</div>
 	</a>
-	<% if user_signed_in? %>
+	<% if user_signed_in? && current_user.role == "admin" %>
 	<div class="center">
 		<%= link_to 'Edit', edit_birthday_path(birthday), class: 'btn btn-info' %>
 		<%= link_to 'Delete', birthday, method: 'delete', class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
