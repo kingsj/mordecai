@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def authenticate_admin!
-    unless (user_signed_in? && current_user.role == "admin")
+    unless (user_signed_in? && current_user.admin?)
       flash[:alert] = "You must be an authenticated user to do this action."
 
       redirect_to root_path

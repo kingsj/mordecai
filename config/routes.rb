@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :birthdays
 
+  resources :users, only: [:index, :update]
+
   # resources :users, only: [:show]  
 
   

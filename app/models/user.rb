@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
   validates :email, 
   :format => {:with => /\A.+@ixperience.co.za\z/i,
   	:message => ": You must be an employee of iXperience to use GroupWish!"}
+    
+  def admin?
+    self.role == "admin"
+  end
   #,
   #  
 end
