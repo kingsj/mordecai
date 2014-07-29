@@ -53,8 +53,9 @@ class BirthdaysController < ApplicationController
 
   def create
     @recipients = Birthday.email_list(params[:recipients])
-  	@birthday  = Birthday.new( birthday_params.merge({ wisher_count: @recipients.size }))
+  	@birthday  = Birthday.new(birthday_params.merge({ wisher_count: @recipients.size }))
   	if @birthday.save 
+      binding.pry
   		flash[:notice] = "Created birthday successfully!"
   		@recipients.each_with_index do |recipient, index|
   			WishMailer.wish_email(recipient, @birthday, index).deliver

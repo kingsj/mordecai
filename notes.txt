@@ -1,6 +1,3 @@
-zchauvin@college.harvard.edu,, francois@ixperience.co.za
-
-Elan, it's been amazing getting to know you over the past month, you're extremely talented and I've learned a ton from you! Hope you had a great birthday!  	
 
 avs3ev@virginia.edu,
 alexbeam@umich.edu,
@@ -8,7 +5,6 @@ lawrence.tenn@yale.edu,
 allenxyz@umich.edu,
 adi2hf@virginia.edu,
 amandeepsaini1995@gmail.com,
-amy.chang@yale.edu,
 bh2447@barnard.edu,
 cmc4af@virginia.edu,
 christianliu@college.harvard.edu,
@@ -28,7 +24,7 @@ justusscheder@gmail.com,
 kamaljit@sas.upenn.edu,
 kevin.h.nguyen.15@dartmouth.edu,
 kmihayo@college.harvard.edu,
-lep9cf@virginia.edu,
+lep9cf@virginia.edu
 
 lylesswift@gmail.com,
 mtl47@georgetown.edu,
@@ -52,6 +48,18 @@ isra@ixperience.co.za,
 jonny@ixperience.co.za,
 rafi@ixperience.co.za,
 elan@ixperience.co.za
-
 seth@ixperience.co.za,
-zchauvin@college.harvard.edu,
+micah@ixperience.co.za
+
+khahm@stanford.edu,
+lkadisha@stanford.edu,
+ldikeou@stanford.edu,
+lydiabai@stanford.edu,
+rmusa@stanford.edu,
+act66@drexel.edu
+
+
+zchauvin@college.harvard.edu
+
+
+amy.chang@yale.edu,
